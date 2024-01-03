@@ -66,7 +66,7 @@ options={[
  
 
 </Grid>
-<div funcss="padding">
+<div className="padding">
         <Button text="Add Book" color="white" bg="primary" funcss="full-width"
         onClick={()=>window.location.assign("/dashboard")}
         />
