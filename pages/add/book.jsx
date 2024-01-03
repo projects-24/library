@@ -1,19 +1,20 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../../styles/Home.module.css'
-import Typography from "../../Funcss/Components/Typography"
 import Container from "../../Funcss/Components/Container"
 import Breadcrumb from "../../Funcss/Components/Breadcrumb"
 import Button from "../../Funcss/Components/Button"
 import Icon from "../../Funcss/Components/Icon"
 import Card from "../../Funcss/Components/Card";
-import Input from '../../Funcss/Components/Input';
 import IconicInput from '../../Funcss/Components/IconicInput';
 import Div from '../../Funcss/Components/Div';
 import Section from '../../Funcss/Components/Section';
 import Grid from '../../Funcss/Components/Grid';
 import Col from '../../Funcss/Components/Col';
 import Navbar from './../navBar';
+import Text from 'funuicss/ui/text/Text'
+import Input from 'funuicss/ui/input/Input';
+
 export default function Book() {
   return (
     <div className="bgHome">
@@ -25,53 +26,51 @@ export default function Book() {
 <Navbar />
    <div className="main">
       
-<Card funcss="width-600-max center white round-edge padding-20 form">
-<Div funcss="row-flex padding">
+<Card funcss="width-600-max center white round-edge padding-20 ">
+
 <div className="padding">
-    <Icon icon="icon-notebook" size={3} color="primary" />
+<Text heading="h1" text="New Book" />
+<Text text="Enter all details correctly before submitting the form" block />
 </div>
-<div className="padding">
-<Typography heading="h1" text="New Book" />
-</div>
-</Div>
-<Grid>
+<Grid funcss={"section"}>
+<Col sm={12} md={12} lg={12} funcss="padding">
+<Input type="text" label="Shelve Number" funcss="full-width"   />
+    </Col>
 <Col sm={12} md={6} lg={6} funcss="padding">
-    <IconicInput funcss="section full-width" position="left" >
-    <Icon icon="icon-notebook" color="primary" />
-<Input type="text" label="Title" funcss="full-width" bordered={true}  />
-</IconicInput>
+<Input type="text" label="Title" funcss="full-width"   />
     </Col>
     <Col sm={12} md={6} lg={6} funcss="padding">
-    <IconicInput funcss="section full-width" position="left" >
-    <Icon icon="icon-check" color="primary" />
-<Input type="text" label="ISBN Number" funcss="full-width" bordered={true}  />
-</IconicInput>
+<Input type="text" label="ISBN Number" funcss="full-width"   />
     </Col>
     <Col sm={12} md={6} lg={6} funcss="padding">
-    <IconicInput funcss="section full-width" position="left" >
-    <Icon icon="icon-user" color="primary" />
-<Input type="text" label="Author" funcss="full-width" bordered={true}  />
-</IconicInput>
+<Input type="text" label="Author" funcss="full-width"   />
     </Col>
     <Col sm={12} md={6} lg={6} funcss="padding">
-    <IconicInput funcss="section full-width" position="left" >
-    <Icon icon="icon-lock" color="primary" />
-<Input type="text" label="Book Code" funcss="full-width" bordered={true}  />
-</IconicInput>
+<Input type="text" label="Book Code" funcss="full-width"   />
     </Col>
     <Col sm={12} md={12} lg={12} funcss="padding">
-    <IconicInput funcss="section full-width" position="left" >
-    <Icon icon="icon-grid" color="primary" />
-<Input type="text" label="Category" funcss="full-width" bordered={true}  />
-</IconicInput>
+<Input
+fullWidth 
+select
+options={[
+    {value:"" , text:"Select category"} ,
+    {value:"" , text:"Fantasy"} ,
+    {value:"" , text:"Drama"} ,
+    {value:"" , text:"Novel"} ,
+    {value:"" , text:"Adventure"} ,
+    {value:"" , text:"Romance"} ,
+]
+    }
+/>
     </Col>
-    <Col sm={12} md={12} lg={12} funcss="padding">
+ 
+
+</Grid>
+<div funcss="padding">
         <Button text="Add Book" color="white" bg="primary" funcss="full-width"
         onClick={()=>window.location.assign("/dashboard")}
         />
-    </Col>
-</Grid>
-
+    </div>
 </Card>
 
    </div>

@@ -1,13 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Typography from "../Funcss/Components/Typography"
+import Text from "funuicss/ui/text/Text"
 import Container from "../Funcss/Components/Container"
 import Breadcrumb from "../Funcss/Components/Breadcrumb"
-import Button from "../Funcss/Components/Button"
+import Button from "funuicss/ui/button/Button"
 import Icon from "../Funcss/Components/Icon"
-import Card from "../Funcss/Components/Card";
-import Input from '../Funcss/Components/Input';
+import Card from "funuicss/ui/card/Card";
+import Input from 'funuicss/ui/input/Input';
 import IconicInput from '../Funcss/Components/IconicInput';
 import Div from '../Funcss/Components/Div';
 import Section from '../Funcss/Components/Section';
@@ -23,36 +23,46 @@ export default function Home() {
       </Head>
 
      
-<Card funcss="width-400-max center white round-edge padding-20 form">
-<Div funcss="row-flex">
-<div className="padding">
-    <Icon icon="fas fa-book" size={3} color="primary" />
-</div>
-<div className="padding">
-<Typography heading="h1" text="Login Account" />
-</div>
-</Div>
+<Card 
+funcss='padding-40'
+maxWidth='400px'
+header={<>
+<Text heading="h1" text="Login Account" block />
+<Text  text="Enter your email and password to login" block />
+</>}
+body={<>
 <Grid>
-<Col sm={12} md={12} lg={12} funcss="padding">
-    <IconicInput funcss="section full-width" position="left" >
-    <Icon icon="far fa-paper-plane" color="primary" />
-<Input type="email" label="Email" funcss="full-width" bordered={true}  />
-</IconicInput>
+<Col sm={12} md={12} lg={12} funcss="section">
+<Text
+      text='Email'
+      size='small'
+      color='primary'
+      bold
+      block
+      funcss='margin-bottom-10'
+      />
+<Input type="email"  fullWidth bordered  />
     </Col>
-    <Col sm={12} md={12} lg={12} funcss="padding">
-    <IconicInput funcss="section full-width" position="left" >
-    <Icon icon="fas fa-lock" color="primary" />
-<Input type="password" label="Password" funcss="full-width" bordered={true}  />
-</IconicInput>
-    </Col>
-    <Col sm={12} md={12} lg={12} funcss="padding">
-        <Button text="Login" color="white" bg="primary" funcss="full-width"
-        onClick={()=>window.location.assign("/dashboard")}
-        />
+    <Col sm={12} md={12} lg={12} funcss="section">
+      <Text
+      text='Password'
+      size='small'
+      color='primary'
+      bold
+      block
+      funcss='margin-bottom-10'
+      />
+    <Input type="password"  fullWidth bordered  />
     </Col>
 </Grid>
+</>}
 
-</Card>
+footer={        <Button text="Login" color="white" bg="primary" fullWidth
+onClick={()=>window.location.assign("/dashboard")}
+/>}
+
+/>
+
 
 
     </div>
