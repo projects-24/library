@@ -8,14 +8,14 @@ import Icon from "../../Funcss/Components/Icon"
 import Card from "../../Funcss/Components/Card";
 import IconicInput from '../../Funcss/Components/IconicInput';
 import Div from '../../Funcss/Components/Div';
-import Section from '../../Funcss/Components/Section';
+import Section from 'funuicss/ui/specials/Section';
 import Grid from '../../Funcss/Components/Grid';
 import Col from '../../Funcss/Components/Col';
 import Navbar from './../navBar';
 import Text from 'funuicss/ui/text/Text'
 import Input from 'funuicss/ui/input/Input';
 
-export default function Book() {
+export default function Category() {
   return (
     <div className="bgHome">
       <Head>
@@ -29,43 +29,12 @@ export default function Book() {
 <Card funcss="width-600-max center white round-edge padding-20 ">
 
 <div className="padding">
-<Text heading="h1" text="New Book" />
+<Text heading="h1" text="New Category" />
 <Text text="Enter all details correctly before submitting the form" block />
 </div>
-<Grid funcss={"section"}>
-<Col sm={12} md={12} lg={12} funcss="padding">
-<Input type="text" label="Shelve Number" funcss="full-width"   />
-    </Col>
-<Col sm={12} md={6} lg={6} funcss="padding">
-<Input type="text" label="Title" funcss="full-width"   />
-    </Col>
-    <Col sm={12} md={6} lg={6} funcss="padding">
-<Input type="text" label="ISBN Number" funcss="full-width"   />
-    </Col>
-    <Col sm={12} md={6} lg={6} funcss="padding">
-<Input type="text" label="Author" funcss="full-width"   />
-    </Col>
-    <Col sm={12} md={6} lg={6} funcss="padding">
-<Input type="text" label="Book Code" funcss="full-width"   />
-    </Col>
-    <Col sm={12} md={12} lg={12} funcss="padding">
-<Input
-fullWidth 
-select
-options={[
-    {value:"" , text:"Select category"} ,
-    {value:"" , text:"Fantasy"} ,
-    {value:"" , text:"Drama"} ,
-    {value:"" , text:"Novel"} ,
-    {value:"" , text:"Adventure"} ,
-    {value:"" , text:"Romance"} ,
-]
-    }
-/>
-    </Col>
- 
-
-</Grid>
+<Section gap={2}>
+<Input type="text" label="Category Name" fullWidth  />
+</Section>
 <div className="padding">
         <Button text="Add Book" color="white" bg="primary" raised bold
         onClick={()=>window.location.assign("/dashboard")}

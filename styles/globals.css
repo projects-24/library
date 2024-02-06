@@ -2,8 +2,7 @@
   font-family: 'Raleway', sans-serif;
 }
 :root{
-  --primary:#9b91f2 !important;
-  --secondary:#aff2f9 !important;
+
   --app-container: #fbfcff;
   --main-color: #1f1c2e;
 }
@@ -51,8 +50,6 @@ backdrop-filter: blur(17.4px);
 }
 .main{position:absolute;top: 60px;left: 250px;width:calc(100% - 250px);padding-top: 30px;}
 
-.text-primary{color:var(--primary)}
-.text-secondary{color:var(--secondary)}
 .designBg{
 
 }

@@ -1,10 +1,10 @@
-import List from '../Funcss/Components/List';
-import ListItem from '../Funcss/Components/ListItem';
+import List from 'funuicss/ui/list/List';
+import ListItem from 'funuicss/ui/list/Item';
 import Div from 'funuicss/ui/div/Div';
 import Icon from '../Funcss/Components/Icon';
 import Card from '../Funcss/Components/Card';
 import Avatar from '../Funcss/Components/Avatar';
-import Section from '../Funcss/Components/Section';
+import Section from 'funuicss/ui/specials/Section';
 import Link from 'next/link';
 import React, { PureComponent, useState ,useEffect} from 'react';
 import Button from 'funuicss/ui/button/Button'
@@ -35,7 +35,7 @@ useEffect(() => {
     <AppBar
     funcss='card'
     left={<>
-        <Text heading="h4" text="Books Library" funcss="text-primary"/>
+        <Text heading="h4" text="library catalogue" funcss="text-primary"/>
     </>}
 
     right={<>
@@ -56,14 +56,14 @@ useEffect(() => {
         <div className="text-center padding show-medium-down">
           <i className='lni lni-close hover-text-red pointer absolute top-20 right-20' onClick={HandlesideBar}></i>
           </div>
-        <List>
+        <List gap={0.5}>
 
         <ListItem>
        <Link href="/dashboard">
         <a>
         <RowFlex justify="">
         <Div>
-        <Div funcss='padding central dark900 roundEdgeSmall raised '>
+        <Div funcss='padding central dark900 roundEdgeSmall '>
         <Icon icon="icon-graph" color="indigo" />
         </Div>
         </Div>
@@ -77,7 +77,7 @@ useEffect(() => {
         <a>
         <RowFlex justify="">
         <Div>
-        <Div funcss='padding central dark900 roundEdgeSmall raised '>
+        <Div funcss='padding central dark900 roundEdgeSmall '>
         <Icon icon="icon-notebook" color="indigo" />
         </Div>
         </Div>
@@ -91,7 +91,7 @@ useEffect(() => {
         <a>
         <RowFlex justify="">
         <Div>
-        <Div funcss='padding central dark900 roundEdgeSmall raised '>
+        <Div funcss='padding central dark900 roundEdgeSmall '>
         <Icon icon="icon-plus" color="indigo" />
         </Div>
         </Div>
@@ -100,26 +100,13 @@ useEffect(() => {
         </a>
         </Link>
         </ListItem>
+      
         <ListItem>
-       <Link href="/">
+       <Link href="/add/category">
         <a>
         <RowFlex justify="">
         <Div>
-        <Div funcss='padding central dark900 roundEdgeSmall raised '>
-        <Icon icon="icon-notebook" color="indigo" />
-        </Div>
-        </Div>
-        <Div funcss="padding">Delete Book</Div>
-        </RowFlex>
-        </a>
-        </Link>
-        </ListItem>
-        <ListItem>
-       <Link href="/">
-        <a>
-        <RowFlex justify="">
-        <Div>
-        <Div funcss='padding central dark900 roundEdgeSmall raised '>
+        <Div funcss='padding central dark900 roundEdgeSmall '>
         <Icon icon="icon-grid" color="indigo" />
         </Div>
         </Div>
@@ -130,6 +117,11 @@ useEffect(() => {
         </ListItem>
 
         </List>
+
+        <Section gap={2}/>
+        <Link href={"/"}>
+        <Button text='LogOut' rounded raised bg='dark' bold fullWidth/>
+        </Link>
               </div>
         </div>
     </div>

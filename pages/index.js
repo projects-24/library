@@ -24,6 +24,7 @@ export default function Home() {
 
      
 <Card 
+shadowless
 funcss='padding-40'
 maxWidth='400px'
 header={<>
@@ -57,7 +58,7 @@ body={<>
 </Grid>
 </>}
 
-footer={        <Button text="Login" color="white" bg="primary" fullWidth
+footer={        <Button text="Login" bold bg="primary" fullWidth
 onClick={()=>window.location.assign("/dashboard")}
 />}
 
